@@ -1,0 +1,202 @@
+{
+  "lanCode": "tr",
+  "site": {
+    "title": "Persia Travel Money",
+    "description": "Persia Travel Money kartı, İran'a, yerli halkın yaptığı gibi yaşamak için seyahat eden turistlere, akıllı bir kart ve güvenli ve kullanışlı bir ödeme çözümü sunmaktadır."
+  },
+  "global": {
+    "logIn": "Oturum aç",
+    "applyForCard": "Karta Başvur"
+  },
+  "locales": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "tr",
+      "name": "Türkçe"
+    },
+    {
+      "code": "az",
+      "name": "Azerbaijani"
+    },
+    {
+      "code": "ru",
+      "name": "Pусский"
+    }
+  ],
+  "topMenu": {
+    "home": "Ev",
+    "features": "Özellikler",
+    "orderCard": "Sipariş Kartı",
+    "cardHighlights": "Kart Özellikleri",
+    "aboutUs": "Hakkımızda"
+  },
+  "features": {
+    "title": "Özellikler",
+    "order": {
+      "title": "Kolay sipariş",
+      "text": "Persia Travel Money, seyahate başlamadan önce internet üzerinden kartınızı online olarak kayıt etmenize imkan sağlar ve böylece İran`a iner inmez paranızı kullanmanıza olanak sağlar."
+    },
+    "load": {
+      "title": "Kolay yükleme",
+      "text": "Herhangi bir banka hesabından Persia Travel Money kartına para aktarabilirsiniz ve  paranızİran para biriminde harcama yapmaya hazır olacaktır."
+    },
+    "use": {
+      "title": "Kolay kullanım",
+      "text": "Persia Travel Money ile paranızı kolayca yönetip kullanabilir ve seyahatinizin keyfini çıkarırken 7/24 servislerinden faydalanabilirsiniz."
+    }
+  },
+  "why": {
+    "title": "Neden “Persia Travel Money (pers seyahat çeki)”",
+    "text": "İran her zaman tarihi, kültürel ve dini mekanları ziyaret etmeyi amaçlayan dünyanın dört bir yanındaki turistlerin en gözde yerlerinden biri olmuştur. İran'a gitmek isteyen turistlere özel ödeme imkânları sağlamak için yeni nesil kart ve ödeme çözümü kurduk. İran'da bir yolculuğa çıkarken uluslararası turistlere tesis ve konfor sağlamak için ulusal bir turizm ödeme çözümü sunuyoruz ve uyguluyoruz."
+  },
+  "obtain": {
+    "title": "Persia Travel Money Başvurusu/Alımı",
+    "texts": [
+      "Her turist, İran`a seyahatinden önce veya seyahati sırasında Persia Travel Money`ye başvurabilir. Banka başvuruyu alır ve onaylandıktan sonra kart, turistin isteği doğrultusunda varılan havaalanına veya diğer sınır noktalarından birine gönderilir. Persia Travel Money kartına giriş yaptığınız andan itibaren, İran bankaları ve ödeme ağlarında kullanılabilmektedir.",
+      "Persia Travel Money kartınıza, internet sitemizden yükleme yapabilir. Böylece hemen Iran para biriminden harcanmaya hazır hale gelecektir. Diğer taraftan, eğer yanınızda nakit bulunuyorsa, belirli bankalardan bozdurup Persia Travel Money kartınızıa yükliyebilirsiniz. Günlük harcamalarınız için, dövizin bozdurulup Persia Travel Money kartında Iran Riyali bulundurmak daha uygun ve kullanışlı olmaktadır.  Seyahatiniz sonunda hesabınızda kalan paranızı ister havaalanında kartınızdan çekebilir veya müşteri hizmetleri servisimizden istediğiniz döviz cinsinden ülkenizdeki hesabınıza transfer talep edebilirsiniz"
+    ]
+  },
+  "highlights": {
+    "title": "Persia Travel Money Kartın öne çıkan özellikleri",
+    "items": [
+      "5.5 milyondan fazla EFT-POS terminaliyle, geniş mağaza ve market ağına katılım.",
+      "Ülke çapında 43.000'den fazla ATM'den 24 Saat Nakit Para Çekme imkanı.",
+      "ATM`de gizli nakit çekim ücreti bulunmamakladır",
+      "Online mağazalardan güvenli alışveriş",
+      "İnternet üzerinden kart siparişi, durum ve hesap kontrolü",
+      "Ön-ödemeli tekrar dolum",
+      "Farklı Para Birimlerinden Kartlara Elektronik Fon Aktarımı",
+      "Emniyetli ve güvenilir",
+      "Kolayca Döviz Taşımacılığı ve Muhafazası"
+    ]
+  },
+  "numbers": {
+    "title": "İran'ın Finansal Ağlar ve Mağazalarına Erişim",
+    "pos": {
+      "title": "EFT-POS TERMİNALLERİ",
+      "number": "5500000"
+    },
+    "atm": {
+      "title": "ULUSAL ATM`ler",
+      "number": "43000"
+    },
+    "cash": {
+      "title": "GİZLİ NAKİT ÇEKME ÜCRETİ",
+      "number": "0.1"
+    },
+    "merchants": {
+      "title": "E-ticaret firmaları",
+      "number": "50000"
+    }
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "text": "Persia Travel Money, Tosan co. ve Iran Banka Ağları ortaklığı ile kurulmuştur.  Misyonumuz, İran`ın güzelliklerini keşfetmek isteyen gezginlere daha iyi olanaklar ve hizmet sağlamaktır.  Turistlerin, İran`ı ziyaretleri sırasında para ve zamandan tasarruf sağlayabilmeleri için güvenli ve uygun bir biçimde paralarını transfer edebilecekleri bir kart sunmaktayız. Persia Travel Money, İran`ı yerel halkla benzer şekilde deneyimlemenize ve İran`daki geniş market ve mağaza ağına giriş yapmanıza olanak sağlayacaktır."
+  },
+  "footerMenu": {
+    "links": [
+      {
+        "title": "Bizimle iletişime geçin",
+        "link": "contact-us.html"
+      },
+      {
+        "title": "Şartlar ve koşullar"
+      },
+      {
+        "title": "Kullanım Şartları"
+      },
+      {
+        "title": "Gizlilik Politikası"
+      },
+      {
+        "title": "Sıkça Sorulan Sorular (S.S.S)",
+        "link": "faq.html"
+      }
+    ]
+  },
+  "copyright": "Copyright © 2015 Persia Travel Money. Her hakkı saklıdır.",
+  "contact": {
+    "title": "Bize Ulaşın | Persia Travel Money",
+    "description": "Nasıl yardımcı olabiliriz? Persia Travel Money ile ilgili aradığınızı bulamadıysanız, 7/24 yardım masamızdan yardım almak için bizi arayabilir ve e-postayla arayabilirsiniz.",
+    "header": "Mesaj gönder/Mektup gönder",
+    "form": {
+      "name": "İsim",
+      "email": "E-posta",
+      "message": "Mesaj",
+      "send": "Mesaj gönder"
+    },
+    "addresses": [
+      {
+        "title": "Bizim adresimiz",
+        "texts": [
+          "50-4-2, Wisma Uoa Damansara, 50, Jalan Dungun, Bukit Damansara, 50490 Kuala Lumpur,",
+          "Wilayah Persekutuan Kuala Lumpur, Malaysia.",
+          "Tel: +60 3-2093 2721"
+        ]
+      }
+    ]
+  },
+  "returnAndRefund": {
+    "title": "Return & Refund Policy | Persia Travel Money",
+    "header": "Return & Refund Policy",
+    "text": "Persia Travel Money card is active in any ATM & POS terminal in Iran and you can directly access to your money. In any situation which you don’t access to Iranian ATM or POS terminal, you can just simply contact our customer care team on +60 3-2093 2721 (9AM – 6 PM) or email us at info@persiatravelmoney.com for any assistance."
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular | Persia Travel Money",
+    "description": "Bu yararlı SSS'lerle Pers Seyahat Seyahat Para ile ilgili sorularınıza cevap bulabilirsiniz. Sorularınıza hızlı cevaplar bulmak için SSS'lerimizi arayabilirsiniz.",
+    "header": "Sıkça Sorulan Sorular (SSS)",
+    "text1": "AŞAĞIDAKİ BİZE SIKCA SORULAN SORULARI KONTROL EDİN -  SORULARINIZIN CEVABIN ORDAN BULABİLİRSİNİZ",
+    "text2": "Cevabı S.S.S'lerde bulamazsan, lütfen müşteri hizmetleri ekibimize bir e-posta bırakın. Mümkün olan en kısa sürede size geri döneceğiz.",
+    "questionsAnswers": [
+      {
+        "question": "Persia Travel Money kullanmanın en önemli faydaları/avantajları nelerdir? ",
+        "answer": "Persia Travel Money kartı, İran`daki geniş market ve mağaza ağına girmenize olanak sağlayacaktır. Persia Travel Money kartını kullanarak İran para birimiyle, İran`da herhangi bir şey alabilir ayrıca ATM`lerden nakit çekebilirsiniz.  İnternet mağazalarından alış veriş ise müşterilerimiz için diğer bir seçenektir; İran`da kaldığınız süre boyunca ihtiyacınız olan herhangi bir şeyi internet sitelerinden sipariş edebilirsiniz. Persia Travel Money kartını kullandığınızda, nakit taşımanıza gerek kalmaz ve para bozdurma gibi bir derdiniz olmaz.",
+        "subAnswers": [
+          "Zamandan ve paradan tasarruf etme",
+          "Güvenli hissetme",
+          "İran`ı yerel halk gibi deneyimleme"
+        ]
+      },
+      {
+        "question": "Persia Travel Money kartını nerelerde kullanabilirim?",
+        "answer": "Alış-veriş merkezlerinde, Turistik yerlerde, restoranlarda, otellerde, müzelerde, eğlence merkezlerinde, parklarda, İnternetten alış-verişte ve paraya ihtiyacınız olduğu her yerde.",
+        "subAnswers": [""]
+      },
+      {
+        "question": "Persia Travel Money`e şimdi başvurmanın bir yararı var mı? ",
+        "answer": "Eğer Persia Travel Money`ye online/çevrimiçi olarak ve bu site üzerinden başvurursanız, Iran`a varır varmaz kartınıza giriş imkanına sahip olursunuz. Böylece seyahatinizin ilk anından itibaren Persia Travel Money`yi kullanabilirsiniz.",
+        "subAnswers": [""]
+      },
+      {
+        "question": "Persia Travel Money'i nasıl sipariş edebilirim?",
+        "answer": "Persia Travel Money karta, www.Persiatravelmoney.com sitesinden başvuru yapabilirsiniz. Banka başvuruyu alır ve onaylandıktan sonra kart, turistin isteği doğrultusunda varılan havaalanına veya diğer sınır noktalarından birine gönderilir.",
+        "subAnswers": [""]
+      },
+      {
+        "question": "İran Seyahat Para kartımı nasıl aktive edebilirim?",
+        "answer": "Kartınızı aktifleştirme prosedürü kolaydır. Kartınızla birlikte gelen mektuptaki direktifleri takip edebilirsiniz.",
+        "subAnswers": [""]
+      },
+      {
+        "question": "Persia Travel Money kartıma nasıl yükleme yapabilirim? ",
+        "answer": "Persia Travel Money karıtınıza, internet sitemiz üzerinden yükleme yapabilir ve kartınızı, İran para birimi üzerinden kullanıma hazır hale getirebilirsiniz. Bunun yanında, yanınızda farklı bir döviz cinsi varsa, anlaşmalı bankalarda bozdurarak Persia Travel Money kartınızı doldurabilirsiniz. ",
+        "subAnswers": [""]
+      },
+      {
+        "question": "Persia Travel Money karta, İran`dayken başvurabilir miyim? ",
+        "answer": "Evet, Persia Travel Money karta, seyahatinizden önce veya İran`da, seyahatiniz sırasında başvurabilirsiniz.",
+        "subAnswers": [""]
+      }
+    ]
+  },
+  "slider": {
+    "text1": "başarılı",
+    "text2": "İran'ı Keşfedin",
+    "text3": "Turizm bağları, finans ve teknoloji ",
+    "text4": "Seyahat Para kartları",
+    "text5": "İRAN'da Uluslararası Turizm Ödeme imkanları"
+  }
+}

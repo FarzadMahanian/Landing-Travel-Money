@@ -1,0 +1,23 @@
+{
+  "name": "Travel Money Home",
+  "description": "A front office admin panel for tourism bussines owners",
+  "main": "",
+  "authors": [
+    "ITTD Team"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "2.1.4",
+    "requirejs": "latest",
+    "compass-mixins": "^1.0.2",
+    "breakpoint-sass": "compass-breakpoint#^2.7.0",
+    "font-awesome": "fontawesome#^4.6.3",
+    "bootstrap-sass": "^3.3.7"
+  }
+}

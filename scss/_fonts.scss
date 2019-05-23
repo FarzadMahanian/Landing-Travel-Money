@@ -1,0 +1,20 @@
+$fpath: '../fonts/';
+
+
+$name: 'benton/BentonSans Regular';
+@font-face {
+  font-family: 'Benton';
+  src: url('#{$fpath}#{$name}.otf');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.woff') format('woff');
+}
+
+$name: 'benton/BentonSans Light';
+@font-face {
+  font-family: 'BentonLight';
+  src: url('#{$fpath}#{$name}.otf');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.woff') format('woff');
+}

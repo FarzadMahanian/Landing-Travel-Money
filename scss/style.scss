@@ -1,0 +1,987 @@
+@import '../js/compass-mixins/lib/compass';
+@import '../js/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../js/font-awesome/scss/font-awesome';
+@import '../js/breakpoint-sass/stylesheets/breakpoint';
+@import 'fonts';
+@import 'vars';
+@import 'helpers';
+@import 'themeStyle';
+
+/* =================================== */
+/*	Basic Style
+/* =================================== */
+
+body {
+  background-color: $primary-color;
+  font-family: 'Benton', 'Open Sans', sans-serif;
+  line-height: 21px;
+  font-size: 13px;
+  color: #6a737b;
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure, p {
+  margin: 0;
+}
+
+a {
+  color: #fff;
+
+  -webkit-transition: all .3s ease-in 0s;
+  -moz-transition: all .3s ease-in 0s;
+  -ms-transition: all .3s ease-in 0s;
+  -o-transition: all .3s ease-in 0s;
+  transition: all .3s ease-in 0s;
+}
+
+iframe {
+  border: 0;
+}
+
+a, a:focus, a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+a:focus, a:hover {
+  color: #6CB670;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+.clear:before,
+.clear:after {
+  content: " ";
+  display: table;
+}
+
+.clear:after {
+  clear: both;
+}
+
+.clear {
+  *zoom: 1;
+}
+
+span.color {
+  color: $primary-color;
+}
+
+#home > section,
+.footer {
+  padding: 30px 0;
+}
+
+.sec-title {
+}
+
+.sec-title h2 {
+  color: #8c8c8c;
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  @include breakpoint(0 $screen-sm) {
+    font-size: 18px;
+    line-height: 1.7em;
+  }
+}
+
+.sec-sub-title {
+  margin: 35px 0 45px;
+}
+
+.sec-sub-title p {
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 18px;
+  color: #5b646e;
+}
+
+.devider i {
+  color: #cccccc;
+}
+
+.devider:before,
+.devider:after {
+  content: "______________________";
+  color: #cccccc;
+  position: relative;
+  bottom: 6px;
+  @include breakpoint(0 $screen-sm) {
+    content: "__________";
+  }
+}
+
+.devider:before {
+  right: 10px;
+}
+
+.devider:after {
+  left: 10px;
+}
+
+.mb50 {
+  margin-bottom: 50px;
+}
+
+#preloader {
+  background-color: #fff;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 1100;
+}
+
+#preloader > img {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  @include translate(-50%, -50%);
+}
+
+/*=========================================
+	Header
+==========================================*/
+
+#navigation {
+  background-color: rgba($primary-color, 0.7);
+  border: 0 none;
+  margin: 0;
+  -webkit-transition: background-color 800ms linear;
+  -moz-transition: background-color 800ms linear;
+  -ms-transition: background-color 800ms linear;
+  -o-transition: background-color 800ms linear;
+  transition: background-color 800ms linear;
+}
+
+.navbar-toggle {
+  margin: 4px 10px;
+  i {
+    color: #fff;
+  }
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-nav li a {
+  border-top: 3px solid transparent;
+}
+
+.navbar-nav li a.current,
+.navbar-nav li a:focus,
+.navbar-nav li a:hover {
+  background-color: transparent;
+  border-top: 3px solid $secondary-color;
+  color: #fff;
+}
+
+/*=========================================
+	Features
+==========================================*/
+
+.features {
+  background-color: #f3f3f3;
+}
+
+.owl-controls {
+  bottom: -45px;
+  margin-top: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.owl-controls .owl-page {
+  display: inline-block;
+}
+
+.owl-controls .owl-page span {
+  border: 1px solid #C7CED3;
+  border-radius: 20px;
+  display: block;
+  height: 8px;
+  margin: 5px 4px;
+  width: 8px;
+}
+
+.owl-controls .owl-page.active span {
+  background: #062033;
+  border: 0;
+}
+
+.service-icon {
+  float: left;
+  color: $secondary-color;
+}
+
+.service-desc {
+  margin-left: 90px;
+  position: relative;
+  top: 27px;
+}
+
+.service-text {
+  @include breakpoint($screen-md) {
+    padding: 50px 0;
+  }
+}
+
+.service-desc h3 {
+  color: $secondary-color;
+  font-size: 20px;
+  font-weight: 600;
+  @include breakpoint(0 $screen-sm) {
+    font-size: 16px;
+  }
+}
+
+/*=========================================
+	Obtain Travel Money
+==========================================*/
+
+#obtain-travel-money {
+  background-image: url("../img/parallax/city.jpg");
+  background-color: rgba(6, 32, 51, .8);
+  background-attachment: fixed !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 !important;
+}
+
+.parallax-overlay {
+  background-color: rgba(6, 32, 51, .8);
+  padding: 70px 0 0;
+  p {
+    color: #ffffff;
+  }
+}
+
+.counters-item {
+  color: #fff;
+}
+
+.counters-item i {
+  border: 1px solid #737C85;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  height: 120px;
+  margin: 0 0 35px;
+  padding: 40px 0 0;
+  width: 120px;
+}
+
+.counters-item strong {
+  display: block;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+.counters-item p {
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+/*=========================================
+	Contact Us
+==========================================*/
+
+.contact {
+  padding-bottom: 0;
+}
+
+.contact-address h3 {
+  color: #062033;
+  font-size: 22px;
+  line-height: 32px;
+  margin-bottom: 25px;
+}
+
+.contact-address p {
+  line-height: 24px;
+}
+
+.contact-form {
+}
+
+.contact-form h3 {
+  color: #062033;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 25px;
+}
+
+.contact-form .input-group {
+  width: 100%;
+}
+
+.contact-form .form-control {
+  border-color: -moz-use-text-color -moz-use-text-color #cccccc;
+  border-radius: 0;
+  border-style: none none solid;
+  border-width: 0 0 1px;
+  box-shadow: none;
+  margin-bottom: 10px;
+}
+
+.contact-form .form-control.error {
+  border-bottom-color: #c0392b;
+}
+
+label.error {
+  color: #c0392b;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.contact-form #form-submit {
+  background-color: transparent;
+  border: 0 none;
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px;
+  text-align: right;
+  width: 200px;
+
+  i {
+    color: $secondary-color;
+  }
+}
+
+.footer-social {
+  margin-top: 17px;
+}
+
+.footer-social li a {
+  color: #cdd2d6;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#map_canvas {
+  height: 500px;
+  width: 100%;
+}
+
+/*=========================================
+	Footer
+==========================================*/
+
+.footer {
+  background-color: #eeeeee;
+  //border-top: 5px solid #062033;
+  color: #fff;
+}
+
+.footer a:hover {
+  color: #062033;
+}
+
+.footer h6 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+.about-us p {
+  line-height: 24px;
+}
+
+.footer-single .subscribe {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.subscribe #subscribe {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  height: 40px;
+  text-indent: 10px;
+  width: 100%;
+}
+
+.subscribe #subs {
+  background-color: transparent;
+  border: 0 none;
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 6px;
+}
+
+.footer-single {
+  line-height: 24px;
+}
+
+.footer-single ul {
+}
+
+.footer-single li {
+  line-height: 32px;
+}
+
+.footer-single p i {
+  margin: 0 10px;
+}
+
+.credit a {
+  color: #062033;
+}
+
+.credit a:hover {
+  color: #fff;
+}
+
+.copyright {
+  color: #fff;
+  margin-top: 100px;
+}
+
+#back-top {
+  bottom: 20px;
+  position: fixed;
+  right: 25px;
+  z-index: 9;
+}
+
+/*============================================================
+	For Small Desktop
+==============================================================*/
+
+@media (min-width: 980px) and (max-width: 1150px) {
+
+}
+
+/*============================================================
+	Tablet (Portrait) Design for a width of 768px
+==============================================================*/
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+  /* services */
+
+  .service-item {
+    margin: 0 auto 30px;
+    text-align: center;
+    width: 325px;
+  }
+
+  .service-icon {
+    float: none;
+    margin: 0 auto 15px;
+    text-align: center;
+    width: 100px;
+  }
+
+  .service-desc {
+    margin-left: 0;
+    position: relative;
+    top: 0;
+  }
+
+  /* fatcs */
+
+  #obtain-travel-money {
+    background-position: center top !important;
+  }
+  .counters-item {
+    margin-bottom: 30px;
+  }
+
+  .counters-item i {
+    margin: 0 0 15px;
+  }
+
+  /* contact */
+
+  .contact-form .name-email input {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .footer-social {
+    margin-top: 45px;
+  }
+
+  /* footer */
+
+  .footer-single {
+    margin-bottom: 30px;
+  }
+
+}
+
+/*============================================================
+	Mobile (Portrait) Design for a width of 320px
+==============================================================*/
+
+@media only screen and (max-width: 767px) {
+
+  .sec-sub-title p {
+    font-size: 14px;
+  }
+
+  /* slider */
+  .carousel-caption h2 {
+    font-size: 35px;
+  }
+
+  .carousel-caption h3 {
+    font-size: 22px;
+  }
+
+  .carousel-caption p {
+    font-size: 14px;
+  }
+
+  .social-links {
+    margin-top: 20%;
+  }
+
+  /* services */
+
+  .service-item {
+    margin: 0 auto 30px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .service-icon {
+    float: none;
+    margin: 0 auto 15px;
+    text-align: center;
+    width: 100px;
+  }
+
+  .service-desc {
+    margin-left: 0;
+    position: relative;
+    top: 0;
+  }
+
+  /* works */
+
+  .work-item {
+    left: 5% !important;
+    width: 90%;
+  }
+
+  /* team */
+
+  .team-member {
+    margin-bottom: 30px;
+  }
+
+  .team-member:last-child {
+    margin-bottom: 0;
+  }
+
+  .member-thumb {
+    margin: 0 auto;
+  }
+
+  /* facts */
+
+  #obtain-travel-money {
+    background-position: center top !important;
+  }
+
+  .counters-item {
+    margin-bottom: 30px;
+  }
+
+  /* contact */
+  .contact-address {
+    margin-bottom: 30px;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .footer-social li {
+    display: inline-block;
+  }
+
+  .footer-social li a {
+    margin: 0 10px;
+  }
+
+  /* footer */
+
+  .footer-single {
+    margin-bottom: 30px;
+  }
+
+}
+
+/*============================================================
+	Mobile (Landscape) Design for a width of 480px
+==============================================================*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+  /* services */
+
+  .service-item {
+    margin: 0 auto 30px;
+    text-align: center;
+    width: 325px;
+  }
+
+  .service-icon {
+    float: none;
+    margin: 0 auto 15px;
+    text-align: center;
+    width: 100px;
+  }
+
+  .service-desc {
+    margin-left: 0;
+    position: relative;
+    top: 0;
+  }
+
+  /* works */
+
+  .work-item {
+    left: inherit !important;
+    width: 50%;
+  }
+
+}
+
+/*============================================================
+	My Styles
+==============================================================*/
+#home {
+  section {
+    background-color: #ffffff;
+  }
+  p {
+    line-height: 2em;
+    font-weight: normal;
+  }
+  a {
+    color: lighten($primary-color, 40%);
+    &:hover,
+    &:focus,
+    &:active {
+      color: lighten($primary-color, 30%);
+      cursor: pointer !important;
+    }
+  }
+  .border-b {
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+  }
+  .navbar {
+    @include breakpoint($screen-md) {
+      padding-right: 300px;
+    }
+  }
+  #header-link {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    left: auto;
+    width: 270px;
+    text-align: right;
+    @include breakpoint(0 $screen-md) {
+      right: 100px;
+    }
+    li {
+      display: inline-block;
+      padding: 16px 4px;
+      a {
+        background-color: $secondary-color;
+        color: #FFFFFF;
+        padding: 10px 10px 7px;
+        font-weight: bold;
+        margin-top: 12px;
+        border: 0 !important;
+        text-align: center;
+        @include border-radius(7px);
+        i {
+          margin-right: 5px;
+        }
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+  }
+  .navbar-nav {
+    > li > a {
+      color: #cccccc;
+      cursor: pointer;
+      &:hover,
+      &:focus,
+      &:active,
+      &.current {
+        color: #ffffff;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    .navbar-collapse.collapse.in {
+      height: auto !important;
+      max-height: none !important;
+    }
+    .navbar-nav {
+      > li {
+        a,
+        a.current,
+        a:hover,
+        a:focus,
+        a:active {
+          border: 0;
+        }
+      }
+    }
+  }
+  #language-switch {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    left: auto;
+    background: transparent;
+    color: #FFFFFF;
+    @include breakpoint(0 $screen-md) {
+      right: 57px;
+    }
+    #toggleLanguageSwitch {
+      padding: 5px 7px 1px 7px;
+      @include border-radius(50%);
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    ul {
+      background-color: transparent;
+      position: absolute;
+      overflow: hidden;
+      height: 0;
+      top: 100%;
+      left: auto;
+      right: 0;
+      width: 130px;
+      text-align: center;
+      padding: 0;
+      opacity: 0;
+      @include transition(all 0.3s ease-out 0s);
+      &.open {
+        height: auto;
+        padding: 11px 0;
+        opacity: 1;
+      }
+      &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border: 13px solid transparent;
+        border-bottom-color: $secondary-color;
+        position: absolute;
+        top: -13px;
+        left: auto;
+        right: 3px;
+        z-index: -1;
+      }
+      li {
+        a {
+          display: block;
+          background-color: $secondary-color;
+          padding: 5px 10px;
+          color: #EEEEEE;
+          &:first-child {
+            padding-top: 10px;
+          }
+          &:last-child {
+            padding-bottom: 10px;
+          }
+          &:hover {
+            background-color: lighten($secondary-color, 50%);
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  #logo {
+    width: 230px;
+    margin: 7px 0 7px 15px;
+    @include breakpoint(0 $screen-md) {
+      width: 130px;
+    }
+    @include breakpoint(0 $screen-xs) {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .flow-wrapper {
+    background-color: #18acc9;
+    width: 100% !important;
+    overflow: hidden;
+    .center-wrapper {
+      position: relative !important;
+    }
+  }
+  #features {
+    background-color: #f3f3f3;
+  }
+  #about-us {
+    background-color: #f3f3f3;
+    .img {
+      margin-top: 15px;
+      img {
+        width: 200px;
+        height: auto;
+      }
+    }
+  }
+  #FAQ,
+  #card-highlights,
+  #terms-and-conditions,
+  #terms-of-use,
+  #privacy-policy {
+    .sec-sub-title h3 {
+      font-size: 21px;
+      color: #000000;
+    }
+    .list {
+      line-height: 1.7em;
+      .list-item {
+        position: relative;
+        padding-top: 3px;
+        margin-bottom: 30px;
+        .icon {
+          padding: 5px;
+          border: 3px solid $secondary-color;
+          position: absolute;
+          left: -37px;
+          right: auto;
+          top: 0;
+          bottom: auto;
+          color: $secondary-color;
+          @include border-radius(50%);
+        }
+        .list-title {
+          font-size: 17px;
+          color: #000000;
+        }
+        .list-text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  #card-highlights {
+    .list {
+      .list-item {
+        margin-bottom: 3px;
+        .icon {
+          top: 3px;
+        }
+      }
+    }
+  }
+  #proud {
+    background-color: #102133;
+    .counters-item {
+      img {
+        width: 100px;
+        height: auto;
+      }
+      strong {
+        font-size: 30px;
+      }
+      p {
+        margin: 0;
+        font-size: 17px;
+
+      }
+    }
+  }
+  #contact {
+    padding-bottom: 0;
+    padding-top: 130px;
+    #message {
+      resize: vertical;
+    }
+  }
+  #return-refund {
+    padding-bottom: 0;
+    padding-top: 130px;
+    .contact-address h3 {
+      margin-bottom: 0;
+    }
+  }
+  #footer {
+    padding: 30px 0;
+    background-color: rgba($primary-color, 0.9);
+    .links {
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid darken($primary-color, 5%);
+        border-bottom: 1px solid lighten($primary-color, 10%);
+      }
+    }
+    p {
+      text-align: center;
+      display: inline-block;
+      margin: 10px 30px;
+      @include breakpoint(0 $screen-sm) {
+        display: block;
+      }
+    }
+    img {
+      width: 200px;
+      height: auto;
+    }
+    a {
+      color: #ffffff;
+      &:hover,
+      &:focus,
+      &:active {
+        color: lighten($primary-color, 40%);
+      }
+    }
+  }
+  #back-top {
+    color: $primary-color;
+    background-color: #ffffff;
+    padding: 1px 7px;
+    border: 1px solid lighten($primary-color, 20%);
+    @include border-radius(50%);
+  }
+}
+
+
+

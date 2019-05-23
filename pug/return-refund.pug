@@ -1,0 +1,221 @@
+doctype html
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7(lang='en')
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8(lang='en')
+//if IE 8
+  html.no-js.lt-ie9(lang='en')
+// [if gt IE 8] <!
+html.no-js(lang='en')
+    // <![endif]
+    head
+        // meta charec set
+        meta(charset='utf-8')
+        // Always force latest IE rendering engine or request Chrome Frame
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        // Page Title
+        title= $i18n.returnAndRefund.title
+        // Meta Description
+        meta(name='description', content= $i18n.returnAndRefund.description)
+
+        // Mobile Specific Meta
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        // Google Font
+        // <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        //
+          CSS
+          ==================================================
+        // &lt;!&ndash; Fontawesome Icon font &ndash;&gt;
+        // <link rel="stylesheet" href="css/font-awesome.min.css">
+        // &lt;!&ndash; Twitter Bootstrap css &ndash;&gt;
+        // <link rel="stylesheet" href="css/bootstrap.min.css">
+        // &lt;!&ndash; jquery.fancybox  &ndash;&gt;
+        // <link rel="stylesheet" href="css/jquery.fancybox.css">
+        // &lt;!&ndash; animate &ndash;&gt;
+        // <link rel="stylesheet" href="css/animate.css">
+        // &lt;!&ndash; Main Stylesheet &ndash;&gt;
+        // <link rel="stylesheet" href="css/main.css">
+        // &lt;!&ndash; media-queries &ndash;&gt;
+        // <link rel="stylesheet" href="css/media-queries.css">
+        link(rel='stylesheet', href='../css/style.css')
+        // Modernizer Script for old Browsers
+        script(src='../js/modernizr-2.6.2.min.js')
+    body#home
+        // preloader
+        #preloader
+            img(src='../img/preloader.gif', alt='Preloader')
+        // end preloader
+        //
+          Fixed Navigation
+          ====================================
+        header.navbar-fixed-top.navbar(id='', style='background-color: rgba(4, 39, 87, 1);')
+            ul#header-link
+                li
+                    a(href='http://panel.persiatravelmoney.com/')
+                        i.fa.fa-user(aria-hidden='true')
+                        | #{$i18n.global.logIn}
+                li
+                    a(href='http://panel.persiatravelmoney.com/#/signup')
+                        i.fa.fa-credit-card-alt(aria-hidden='true')
+                        | #{$i18n.global.applyForCard}
+            #language-switch
+                p#toggleLanguageSwitch #{$i18n.lanCode}
+                ul
+                    each locale in $i18n.locales
+                        li
+                            if locale.code != $i18n.lanCode
+                                a(href='../' + locale.code)
+                                    | #{locale.name}
+            .container-fluid
+                .navbar-header
+                    // responsive nav button
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.sr-only Toggle navigation
+                        i.fa.fa-bars.fa-2x
+                    // /responsive nav button
+                    // logo
+                    a.navbar-brand(href='index.html')
+                        h1#logo
+                            img(src='../img/logo-travelmoney-color.svg', alt='Persia Travel Money')
+                    // /logo
+                // main nav
+                nav.collapse.navbar-collapse.navbar-right(role='navigation')
+                    ul.nav.navbar-nav
+                        li
+                            a(href='index.html#home') #{$i18n.topMenu.home}
+                        li
+                            a(href='index.html#features') #{$i18n.topMenu.features}
+                        li
+                            a(href='index.html#obtain-travel-money') #{$i18n.topMenu.orderCard}
+                        li
+                            a(href='index.html#card-highlights') #{$i18n.topMenu.cardHighlights}
+                        li
+                            a(href='index.html#about-us') #{$i18n.topMenu.aboutUs}
+                // /main nav
+        //
+          End Fixed Navigation
+          ====================================
+
+        //
+          Return & Refund Policy
+          ====================================
+        section#return-refund.return-refund.clearfix
+            .container
+                .mb50
+                    .row
+                        .col-xs-12.sec-title.text-center.wow.rubberBand.animated(data-wow-duration='300ms')
+                            h2 #{$i18n.returnAndRefund.header}
+                            .devider
+                                i.fa.fa-check.fa-2x
+                        .col-xs-12.sec-sub-title.wow.fadeInUp.animated(data-wow-duration='300ms', data-wow-delay='300ms')
+                            p #{$i18n.returnAndRefund.text}
+
+                        .col-xs-12.wow.fadeInLeft.animated(data-wow-duration='300ms', data-wow-delay='300ms')
+                            each address in $i18n.contact.addresses
+                                .contact-address.col-xs-12
+                                    h3= address.title
+                                    each item in address.texts
+                                        p= item
+            // Google map
+            #map_canvas.wow.bounceInDown.animated(data-wow-duration='300ms')
+            // End Google map
+
+        //
+          End Return & Refund Policy
+          ====================================
+        footer#footer.footer.text-center
+            .container
+                .row
+                    .col-xs-12.links
+                        each link in $i18n.footerMenu.links
+                            p.wow.fadeInLeft.animated(data-wow-duration='300ms', data-wow-delay='300ms')
+                                a(href= link.link) #{link.title}
+                .row.pt-40
+                    .col-md-12
+                        p.copyright.text-center #{$i18n.copyright}
+                .text-center.img
+                    img(src='../img/logo-travelmoney-color.svg', alt='Travel Money')
+        a#back-top(href='javascript:void(0);')
+            i.fa.fa-angle-up.fa-2x
+        //
+          Essential jQuery Plugins
+          ==================================================
+        // Main jQuery
+        script(src='../js/jquery/dist/jquery.min.js')
+        script(src='../js/requirejs/require.js')
+        // Single Page Nav
+        script(src='../js/jquery.singlePageNav.min.js')
+        // Twitter Bootstrap
+        script(src='../js/bootstrap-sass/assets/javascripts/bootstrap.min.js')
+        // jquery.fancybox.pack
+        script(src='../js/jquery.fancybox.pack.js')
+        // jquery.mixitup.min
+        script(src='../js/jquery.mixitup.min.js')
+        // jquery.parallax
+        script(src='../js/jquery.parallax-1.1.3.js')
+        // jquery.countTo
+        script(src='../js/jquery-countTo.js')
+        // jquery.appear
+        script(src='../js/jquery.appear.js')
+        // Google Map
+        script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDVH5zcFQ1ahTa-vb017Wjb7g_t6g-cf_A&libraries=places')
+        // jquery easing
+        script(src='../js/jquery.easing.min.js')
+        // jquery easing
+        script(src='../js/wow.min.js')
+        script.
+            var wow = new WOW({
+                        boxClass: 'wow',      // animated element css class (default is wow)
+                        animateClass: 'animated', // animation css class (default is animated)
+                        offset: 120,          // distance to the element when triggering the animation (default is 0)
+                        mobile: false,       // trigger animations on mobile devices (default is true)
+                        live: true        // act on asynchronously loaded content (default is true)
+                    }
+            );
+            wow.init();
+        // Custom Functions
+        script(src='../js/custom.js')
+        script(type='text/javascript').
+            $(function () {
+                // ==========  START GOOGLE MAP ========== //
+                function initialize() {
+                    var locations = [
+                        ['Persia Travel Money', 3.151955, 101.665886]
+                    ];
+                    var myCenter = new google.maps.LatLng(locations[0][1], locations[0][2]);
+                    var map = new google.maps.Map(document.getElementById('map_canvas'), {
+                        center: myCenter,
+                        panControl: false,
+                        zoomControl: true,
+                        mapTypeControl: false,
+                        scaleControl: false,
+                        streetViewControl: false,
+                        overviewMapControl: false,
+                        rotateControl: true,
+                        scrollwheel: false,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    });
+                    var infowindow = new google.maps.InfoWindow();
+                    var marker, i;
+                    var bounds = new google.maps.LatLngBounds();
+                    for (i = 0; i < locations.length; i++) {
+                        marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                            map: map,
+                            // icon: '../img/location-icon.png'
+                        });
+                        google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                            return function () {
+                                infowindow.setContent(locations[i][0]);
+                                infowindow.open(map, marker);
+                            }
+                        })(marker, i));
+                        bounds.extend(new google.maps.LatLng(locations[i][1], locations[i][2]));
+                    }
+                    if (locations.length > 1) map.fitBounds(bounds); else map.setZoom(17);
+                }
+
+                google.maps.event.addDomListener(window, "load", initialize);
+                // ========== END GOOGLE MAP ========== //
+            });
+

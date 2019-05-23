@@ -1,0 +1,320 @@
+doctype html
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7(lang='en')
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8(lang='en')
+//if IE 8
+  html.no-js.lt-ie9(lang='en')
+// [if gt IE 8] <!
+html.no-js(lang='en')
+    // <![endif]
+    head
+        // meta charec set
+        meta(charset='utf-8')
+        // Always force latest IE rendering engine or request Chrome Frame
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        // Page Title
+        title= $i18n.site.title
+        // Meta Description
+        meta(name='description', content= $i18n.site.description)
+        // Mobile Specific Meta
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        // Google Font
+        // <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        //
+          CSS
+          ==================================================
+        // &lt;!&ndash; Fontawesome Icon font &ndash;&gt;
+        // <link rel="stylesheet" href="css/font-awesome.min.css">
+        // &lt;!&ndash; Twitter Bootstrap css &ndash;&gt;
+        // <link rel="stylesheet" href="css/bootstrap.min.css">
+        // &lt;!&ndash; jquery.fancybox  &ndash;&gt;
+        // <link rel="stylesheet" href="css/jquery.fancybox.css">
+        // &lt;!&ndash; animate &ndash;&gt;
+        // <link rel="stylesheet" href="css/animate.css">
+        // &lt;!&ndash; Main Stylesheet &ndash;&gt;
+        // <link rel="stylesheet" href="css/main.css">
+        // &lt;!&ndash; media-queries &ndash;&gt;
+        // <link rel="stylesheet" href="css/media-queries.css">
+        link(rel='stylesheet', href='../css/style.css')
+        // Modernizer Script for old Browsers
+        script(src='../js/modernizr-2.6.2.min.js')
+        script(type='text/javascript', charset='utf-8', src='../js/edge.6.0.0.min.js')
+        script.
+            AdobeEdge.loadComposition('travelmoney6', 'EDGE-13683168', {
+                scaleToFit: "both",
+                centerStage: "horizontal",
+                minW: "0px",
+                maxW: "undefined",
+                width: "1200px",
+                height: "860px"
+            }, {dom: []}, {dom: []});
+    body#home
+        // preloader
+        #preloader
+            img(src='../img/preloader.gif', alt='Preloader')
+        // end preloader
+        //
+          Fixed Navigation
+          ====================================
+        header#navigation.navbar-fixed-top.navbar
+            ul#header-link
+                li
+                    a(href='http://panel.persiatravelmoney.com/')
+                        i.fa.fa-user(aria-hidden='true')
+                        | #{$i18n.global.logIn}
+                li
+                    a(href='http://panel.persiatravelmoney.com/#/signup')
+                        i.fa.fa-credit-card-alt(aria-hidden='true')
+                        | #{$i18n.global.applyForCard}
+            #language-switch
+                p#toggleLanguageSwitch #{$i18n.lanCode}
+                ul
+                    each locale in $i18n.locales
+                        li
+                            if locale.code != $i18n.lanCode
+                                a(href='../' + locale.code)
+                                    | #{locale.name}
+            .container-fluid
+                .navbar-header
+                    // responsive nav button
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.sr-only Toggle navigation
+                        i.fa.fa-bars.fa-2x
+                    // /responsive nav button
+                    // logo
+                    a.navbar-brand(href='#')
+                        h1#logo
+                            img(src='../img/logo-travelmoney-color.svg', alt='Persia Travel Money')
+                    // /logo
+                // main nav
+                nav.collapse.navbar-collapse.navbar-right(role='navigation')
+                    ul#nav.nav.navbar-nav
+                        li.current
+                            a(href='#home') #{$i18n.topMenu.home}
+                        li
+                            a(href='#features') #{$i18n.topMenu.features}
+                        li
+                            a(href='#obtain-travel-money') #{$i18n.topMenu.orderCard}
+                        li
+                            a(href='#card-highlights') #{$i18n.topMenu.cardHighlights}
+                        li
+                            a(href='#about-us') #{$i18n.topMenu.aboutUs}
+                // /main nav
+        //
+          End Fixed Navigation
+          ====================================
+
+        //
+          Home Slider
+          ====================================
+        section#Stage.home-page-slider.EDGE-13683168(style='margin:0;padding:0;background:#18acc9;overflow:hidden;height:1000px;')
+        //
+          End Home SliderEnd
+          ====================================
+        //
+          Features
+          ====================================
+        section#features.features
+            .container
+                .row
+                    .sec-title.text-center.mb50.wow.rubberBand.animated(data-wow-duration='300ms')
+                        h2 #{$i18n.features.title}
+                        .devider
+                            i.fa.fa-check.fa-2x
+                    // service item
+                    .col-md-4.wow.fadeInLeft.animated.pr-40.pl-40(data-wow-duration='300ms', data-wow-delay='100ms')
+                        .service-item
+                            .service-icon
+                                i.fa.fa-shopping-bag.fa-5x
+                            .service-desc
+                                h3 #{$i18n.features.order.title}
+                            .service-text
+                                p
+                                    | #{$i18n.features.order.text}
+                    // end service item
+                    // service item
+                    .col-md-4.wow.fadeInUp.animated.pr-40.pl-40(data-wow-duration='300ms', data-wow-delay='200ms')
+                        .service-item
+                            .service-icon
+                                i.fa.fa-refresh.fa-5x
+                            .service-desc
+                                h3 #{$i18n.features.load.title}
+                            .service-text
+                                p
+                                    | #{$i18n.features.load.text}
+                    // end service item
+                    // service item
+                    .col-md-4.wow.fadeInRight.animated.pr-40.pl-40(data-wow-duration='300ms', data-wow-delay='300ms')
+                        .service-item
+                            .service-icon
+                                i.fa.fa-credit-card.fa-5x
+                            .service-desc
+                                h3 #{$i18n.features.use.title}
+                            .service-text
+                                p
+                                    | #{$i18n.features.use.text}
+                    // end service item
+        //
+          End Features
+          ====================================
+        //
+          Why Travelmoney
+          ====================================
+        section#why-travelmoney.why-travelmoney.clearfix
+            .container
+                .row
+                    .col-xs-12.sec-title.text-center.wow.rubberBand.animated(data-wow-duration='300ms')
+                        h2 #{$i18n.why.title}
+                        .devider
+                            i.fa.fa-check.fa-2x
+                    .col-xs-12.sec-sub-title.text-center.wow.fadeInDown.animated(data-wow-duration='300ms', data-wow-delay='300ms')
+                        p
+                            | #{$i18n.why.text}
+        //
+          End Why Travelmoney
+          ====================================
+        //
+          Obtain Travel Money
+          ====================================
+        section#obtain-travel-money.obtain-travel-money.clearfix
+            .parallax-overlay
+                .container
+                    .row
+                        .col-xs-12.sec-title.text-center.wow.rubberBand.animated(data-wow-duration='300ms')
+                            h2 #{$i18n.obtain.title}
+                            .devider
+                                i.fa.fa-check.fa-2x
+                        .col-xs-12.sec-sub-title.text-center.wow.fadeInUp.animated(data-wow-duration='300ms', data-wow-delay='300ms')
+                            each text in $i18n.obtain.texts
+                                p= text
+        //
+          End Obtain Travel Money
+          ====================================
+        //
+          Card Highlights
+          ====================================
+        section#card-highlights.card-highlights.clearfix
+            .container
+                .row
+                    .col-xs-12.sec-title.text-center.wow.rubberBand.animated(data-wow-duration='300ms')
+                        h2 #{$i18n.highlights.title}
+                        .devider
+                            i.fa.fa-check.fa-2x
+                    .col-xs-12.sec-sub-title.wow.fadeInDown.animated(data-wow-duration='300ms', data-wow-delay='300ms')
+                        ul.col-xs-10.col-xs-offset-1.col-sm-12.col-sm-offset-0.list.wow.fadeInDown.animated(data-wow-duration='300ms', data-wow-delay='300ms')
+                            each item in $i18n.highlights.items
+                                li.list-item.wow.fadeInLeft.animated(data-wow-duration='300ms', data-wow-delay='300ms')
+                                    i.fa.fa-check.fa-1x.icon(aria-hidden='true')
+                                    .list-title
+                                        p= item
+        //
+          End Card Highlights
+          ====================================
+        //
+          Our Proud
+          ====================================
+        section#proud.proud
+            .container
+                .row.number-counters
+                    .col-xs-12.sec-title.text-center.mb50.wow.rubberBand.animated(data-wow-duration='1000ms')
+                        h2 #{$i18n.numbers.title}
+                        .devider
+                            i.fa.fa-check.fa-2x
+                    // first count item
+                    .col-lg-3.col-sm-6.col-xs-12.text-center.wow.fadeInUp.animated(data-wow-duration='300ms')
+                        .counters-item
+                            img(src='../img/pos.svg', alt='EFT-POS TERMINALS')
+                            strong(data-to=$i18n.numbers.pos.number) 0
+                            // Set Your Number here. i,e. data-to="56"
+                            p #{$i18n.numbers.pos.title}
+                    .col-lg-3.col-sm-6.col-xs-12.text-center.wow.fadeInUp.animated(data-wow-duration='300ms', data-wow-delay='300ms')
+                        .counters-item
+                            img(src='../img/atm.svg', alt='ATMS NATIONWIDE')
+                            strong(data-to=$i18n.numbers.atm.number) 0
+                            // Set Your Number here. i,e. data-to="56"
+                            p #{$i18n.numbers.atm.title}
+                    .col-lg-3.col-sm-6.col-xs-12.text-center.wow.fadeInUp.animated(data-wow-duration='300ms', data-wow-delay='600ms')
+                        .counters-item
+                            img(src='../img/cash.svg', alt='HIDDEN CASH WITHDRAWAL FEE')
+                            div
+                                strong(style='display: inline-block;', data-to=$i18n.numbers.cash.number, data-decimal='1') 100
+                                strong(style='display: inline-block;')  %
+                            // Set Your Number here. i,e. data-to="56"
+                            p #{$i18n.numbers.cash.title}
+                    .col-lg-3.col-sm-6.col-xs-12.text-center.wow.fadeInUp.animated(data-wow-duration='300ms', data-wow-delay='900ms')
+                        .counters-item
+                            img(src='../img/merchant.svg', alt='E-MERCHANTS')
+                            strong(data-to=$i18n.numbers.merchants.number) 0
+                            // Set Your Number here. i,e. data-to="56"
+                            p #{$i18n.numbers.merchants.title}
+                    // end first count item
+        //
+          End Proud
+          ====================================
+        //
+          About Us
+          ====================================
+        section#about-us.about-us.clearfix
+            .container
+                .row
+                    .col-xs-12.sec-title.text-center.wow.rubberBand.animated(data-wow-duration='300ms')
+                        h2 #{$i18n.about.title}
+                        .devider
+                            i.fa.fa-check.fa-2x
+                    .col-xs-12.sec-sub-title.text-center
+                        p.wow.fadeInLeft.animated(data-wow-duration='300ms', data-wow-delay='300ms')
+                            | !{$i18n.about.text}
+        //
+          End About Us
+          ====================================
+        footer#footer.footer.text-center
+            .container
+                .row
+                    .col-xs-12.links
+                        each link in $i18n.footerMenu.links
+                            p.wow.fadeInLeft.animated(data-wow-duration='300ms', data-wow-delay='300ms')
+                                a(href= link.link) #{link.title}
+                .row.pt-40
+                    .col-md-12
+                        p.copyright.text-center #{$i18n.copyright}
+                .text-center.img
+                    img(src='../img/logo-travelmoney-color.svg', alt='Travel Money')
+        a#back-top(href='javascript:void(0);')
+            i.fa.fa-angle-up.fa-2x
+        //
+          Essential jQuery Plugins
+          ==================================================
+        // Main jQuery
+        script(src='../js/jquery/dist/jquery.min.js')
+        script(src='../js/requirejs/require.js')
+        // Single Page Nav
+        script(src='../js/jquery.singlePageNav.min.js')
+        // Twitter Bootstrap
+        script(src='../js/bootstrap-sass/assets/javascripts/bootstrap.min.js')
+        // jquery.fancybox.pack
+        script(src='../js/jquery.fancybox.pack.js')
+        // jquery.mixitup.min
+        script(src='../js/jquery.mixitup.min.js')
+        // jquery.parallax
+        script(src='../js/jquery.parallax-1.1.3.js')
+        // jquery.countTo
+        script(src='../js/jquery-countTo.js')
+        // jquery.appear
+        script(src='../js/jquery.appear.js')
+        // jquery easing
+        script(src='../js/jquery.easing.min.js')
+        // jquery easing
+        script(src='../js/wow.min.js')
+        script.
+            var wow = new WOW({
+                        boxClass: 'wow',      // animated element css class (default is wow)
+                        animateClass: 'animated', // animation css class (default is animated)
+                        offset: 120,          // distance to the element when triggering the animation (default is 0)
+                        mobile: false,       // trigger animations on mobile devices (default is true)
+                        live: true        // act on asynchronously loaded content (default is true)
+                    }
+            );
+            wow.init();
+        // Custom Functions
+        script(src='../js/custom.js')
